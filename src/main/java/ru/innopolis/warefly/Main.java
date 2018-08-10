@@ -14,7 +14,7 @@ public class Main {
         WebParser wp = new WebParserImpl();
          /*
         Transcriptions  of locations, that are used in the URL
-        String locations[] = {'moskva', 'ekaterinburg', 'ufa', 'sevastopol', 'omsk', 'sankt-peterburg',' perm', 'volgograd', 'kazan', 'voronezh'};
+        String locations[] = {'moskva', 'ekaterinburg', 'ufa', 'sevastopol', 'omsk', 'sankt-peterburg', ' perm', 'volgograd', 'kazan', 'voronezh'};
 
         */
         List<String> shopList = wp.getShopsList("kazan");

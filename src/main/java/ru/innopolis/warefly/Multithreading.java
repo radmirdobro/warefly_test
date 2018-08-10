@@ -24,7 +24,22 @@ public class Multithreading extends Thread {
         for (int i = 0; i < shopList.size(); i++) {
             loggerConsoleInf.info("Идём в магазин " + wp.getShopNameFromUrl((String) shopList.get(i)) + ": " + shopList.get(i));
 
-            /*JSON here*/
+            /*JSON here
+
+             навзвание магазина
+            {"shopName":"dochkisinochki",
+             акция
+              "actions":[{
+             "badge":"-20%", //скидка
+             "dates":"По 19 августа", //дата окончания акции
+             "description":"Стиральный порошок для детского белья 1кг, Кислородный…", //описание акции
+             "quantity":"", //количество за кг
+             "priceNew":"От 149,00 ₽", //новая цена
+             "priceOld":"", //старая цена
+             "actions":[]}
+             ]}
+             */
+
             loggerConsoleInf.info(wp.infoToJson(wp.getActionsInShop(wp.getShopNameFromUrl((String) shopList.get(i)), 60)));
 
             try {

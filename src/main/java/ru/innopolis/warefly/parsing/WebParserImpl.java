@@ -72,6 +72,7 @@ public class WebParserImpl implements WebParser {
         int pages = actionsCount / 30;
         if (shopName != null) {
             while (pages >= pagesCounter) {
+
                 WebDriver webDriver = chromeHeadlessWebDriver.getWebDriver();
 
                 webDriver.get("https://edadeal.ru/kazan/retailers/" + shopName + "?pages=" + pagesCounter);
@@ -139,11 +140,14 @@ public class WebParserImpl implements WebParser {
     }
 
     /**
-     * converts object to GSON
+     * converts object to JSON
      *
      * @param shopInfo
-     * @return String of gson
+     * @return String of json
+     *
      */
+
+
     @Override
     public String infoToJson(Shop shopInfo) {
         Gson gson = new Gson();
