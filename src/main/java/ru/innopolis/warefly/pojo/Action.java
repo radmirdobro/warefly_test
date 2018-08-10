@@ -1,5 +1,8 @@
 package ru.innopolis.warefly.pojo;
 
+/**
+ * Action class
+ */
 public class Action extends Shop {
     private String badge;
     private String dates;

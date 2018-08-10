@@ -3,6 +3,9 @@ package ru.innopolis.warefly.pojo;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Shop class
+ */
 public class Shop {
     private String shopName;
     private List<Action> actions = new ArrayList<>();

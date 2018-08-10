@@ -6,6 +6,9 @@ import ru.innopolis.warefly.parsing.WebParserImpl;
 
 import java.util.List;
 
+/**
+ * Multithreading class
+ */
 public class Multithreading extends Thread {
     static final Logger loggerConsoleInf = Logger.getLogger("consoleinf");
     static WebParser wp = new WebParserImpl();

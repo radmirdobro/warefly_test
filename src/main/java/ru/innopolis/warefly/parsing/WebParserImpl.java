@@ -14,7 +14,9 @@ import ru.innopolis.warefly.pojo.Shop;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * WebParserImpl is used to parsing data from edadeal.ru
+ */
 public class WebParserImpl implements WebParser {
     static final Logger loggerConsoleInf = Logger.getLogger("consoleinf");
     private static ChromeHeadlessWebDriver chromeHeadlessWebDriver = ChromeHeadlessWebDriverImpl.getInstance();

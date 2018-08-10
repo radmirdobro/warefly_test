@@ -15,6 +15,7 @@ public class Main {
          /*
         Transcriptions  of locations, that are used in the URL
         String locations[] = {'moskva', 'ekaterinburg', 'ufa', 'sevastopol', 'omsk', 'sankt-peterburg',' perm', 'volgograd', 'kazan', 'voronezh'};
+
         */
         List<String> shopList = wp.getShopsList("kazan");
 
@@ -24,7 +25,7 @@ public class Main {
         for (int i = 1; i <= countOfThreads; i++) {
             int endOfList = partOfList * i;
             if (i == countOfThreads) {
-                endOfList = shopList.size(); //при последнем проходе, не теряем 'хвост' коллекции
+                endOfList = shopList.size(); //при последнем проходе, не теряем элементы коллекции
             }
             Multithreading thread = new Multithreading(shopList.subList(partOfList * (i - 1), endOfList));
             thread.start();
