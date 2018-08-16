@@ -27,23 +27,29 @@ public class ChromeHeadlessWebDriverImpl implements ChromeHeadlessWebDriver {
      * getWebDriver method start chromedriver.exe with the options described in it
      *
      * @return webDriver (instance)
+     *
+     * chrome options here:
+     * https://peter.sh/experiments/chromium-command-line-switches/#window-size
      */
     @Override
     public WebDriver getWebDriver() {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedrv\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
-        //chromeOptions.setExperimentalOption("useAutomationExtension", false);
+        // chromeOptions.setExperimentalOption("useAutomationExtension", false);
+        // chromeOptions.setExperimentalOption("excludeSwitches","ignore-certificate-errors");
+        //chromeOptions.addArguments("start-maximized");
+        //chromeOptions.addArguments("--disable-extensions");
+        //chromeOptions.addArguments("--disable-web-security");
         chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("start-maximized");
         chromeOptions.addArguments("--disable-gpu");
-        chromeOptions.addArguments("--disable-extensions");
+        chromeOptions.addArguments("--window-size=1920,1080");
 
 
         //обычный режим
-        return new ChromeDriver();
+        //return new ChromeDriver();
 
         //режим без открытия окна браузера
-        // return new ChromeDriver(chromeOptions);
+        return new ChromeDriver(chromeOptions);
     }
 }
 

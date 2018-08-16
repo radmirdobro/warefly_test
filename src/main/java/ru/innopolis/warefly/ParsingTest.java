@@ -71,7 +71,7 @@ public class ParsingTest {
         loggerConsoleInf.info("Запускаем парсинг акций в магазине:");
 
 
-        int shopNumber = 37;
+        int shopNumber = 0;
         loggerConsoleInf.info("Идём в магазин " + wp.getShopNameFromUrl((String) shopList.get(shopNumber)) + ": " + shopList.get(shopNumber));
 
 
